@@ -1,0 +1,312 @@
+/* ===========================================
+   ROOT VARIABLES
+=========================================== */
+
+:root{
+
+    --bg:#0B1220;
+    --bg-soft:#111B2E;
+    --card:#16223A;
+
+    --line:#233248;
+
+    --text:#EAF0F6;
+    --muted:#8FA0B8;
+
+    --accent:#2DD4BF;
+    --accent-soft:#173B36;
+
+    --amber:#F5A623;
+
+    --radius:12px;
+
+    --transition:0.25s ease;
+
+    --container:1100px;
+
+}
+
+/* ===========================================
+   RESET
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===========================================
+   HTML
+=========================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ===========================================
+   BODY
+=========================================== */
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:'Inter',sans-serif;
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================================
+   TYPOGRAPHY
+=========================================== */
+
+h1,
+h2,
+h3,
+h4{
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-weight:700;
+
+}
+
+p{
+
+    color:var(--muted);
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ===========================================
+   UTILITY CLASS
+=========================================== */
+
+.mono{
+
+    font-family:'JetBrains Mono',monospace;
+
+}
+
+.container{
+
+    max-width:var(--container);
+
+    margin:auto;
+
+    padding:0 24px;
+
+}
+
+/* ===========================================
+   SECTION
+=========================================== */
+
+section{
+
+    max-width:var(--container);
+
+    margin:auto;
+
+    padding:80px 24px;
+
+    border-bottom:1px solid var(--line);
+
+}
+
+
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 24px;
+
+    border-radius:8px;
+
+    border:1px solid var(--line);
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:var(--accent);
+
+    border-color:var(--accent);
+
+    color:#081D18;
+
+}
+
+.btn-primary:hover{
+
+    opacity:.9;
+
+    transform:translateY(-2px);
+
+}
+
+.btn-outline{
+
+    background:transparent;
+
+}
+
+.btn-outline:hover{
+
+    border-color:var(--accent);
+
+    color:var(--accent);
+
+}
+
+/* ===========================================
+   REVEAL ANIMATION
+=========================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:opacity .8s ease,
+               transform .8s ease;
+
+}
+
+.reveal.show{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+/* ===========================================
+   CARD
+=========================================== */
+
+.card{
+
+    background:var(--card);
+
+    border:1px solid var(--line);
+
+    border-radius:var(--radius);
+
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:36px 24px;
+
+    color:var(--muted);
+
+    font-size:.85rem;
+
+}
+
+/* ===========================================
+SECTION HEADER
+=========================================== */
+
+.sec-head{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:45px;
+}
+
+.sec-head h2{
+    margin:0;
+    font-size:1.8rem;
+    font-weight:700;
+    color:var(--text);
+    line-height:1.2;
+}
+
+.sec-head .num{
+    color:var(--accent);
+    font-size:.9rem;
+}
+
+
+
+.sec-icon{
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    border-radius:12px;
+
+    color:var(--accent);
+
+    transition:.3s ease;
+}
+
+.sec-icon i{
+    font-size:20px;
+    line-height:1;
+}
+
+.sec-icon:hover{
+    transform:translateY(-3px);
+    border-color:var(--accent);
+}
